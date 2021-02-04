@@ -110,19 +110,19 @@ public class ArrayList<E> extends AbstractList<E>
     private static final long serialVersionUID = 8683452581122892189L;
 
     /**
-     * Default initial capacity.
+     * Default initial capacity. 默认初始容量
      */
     private static final int DEFAULT_CAPACITY = 10;
 
     /**
-     * Shared empty array instance used for empty instances.
+     * Shared empty array instance used for empty instances. 用于空实例的共享空数组实例。
      */
     private static final Object[] EMPTY_ELEMENTDATA = {};
 
     /**
      * Shared empty array instance used for default sized empty instances. We
      * distinguish this from EMPTY_ELEMENTDATA to know how much to inflate when
-     * first element is added.
+     * first element is added. 用于默认大小的空实例的共享空数组实例。我们将其与EMPTY_ELEMENTDATA区分开来，以便知道添加第一个元素时要膨胀多少。
      */
     private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
@@ -136,14 +136,14 @@ public class ArrayList<E> extends AbstractList<E>
 
     /**
      * The size of the ArrayList (the number of elements it contains).
-     *
+     * 数组列表的大小(它包含的元素数量)。
      * @serial
      */
     private int size;
 
     /**
      * Constructs an empty list with the specified initial capacity.
-     *
+     * 使用指定的初始容量构造一个空列表。
      * @param  initialCapacity  the initial capacity of the list
      * @throws IllegalArgumentException if the specified initial capacity
      *         is negative
