@@ -1374,7 +1374,4 @@ public class Date
         return Instant.ofEpochMilli(getTime());
     }
 
-    public static void main(String[] args) {
-        System.out.println("12345678");
-    }
 }
