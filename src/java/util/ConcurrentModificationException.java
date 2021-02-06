@@ -72,7 +72,7 @@ public class ConcurrentModificationException extends RuntimeException {
 
     /**
      * Constructs a ConcurrentModificationException with no
-     * detail message.
+     * detail message. 构造一个ConcurrentModificationException，没有详细消息。
      */
     public ConcurrentModificationException() {
     }
