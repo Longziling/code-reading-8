@@ -56,7 +56,7 @@ public final class Byte extends Number implements Comparable<Byte> {
     public static final byte   MAX_VALUE = 127;
 
     /**
-     * The {@code Class} instance representing the primitive type
+     * The {@code Class} instance representing the primitive type {@code Class}实例表示基本类型
      * {@code byte}.
      */
     @SuppressWarnings("unchecked")
@@ -65,7 +65,7 @@ public final class Byte extends Number implements Comparable<Byte> {
     /**
      * Returns a new {@code String} object representing the
      * specified {@code byte}. The radix is assumed to be 10.
-     *
+     * 返回一个新的{@code String}对象，表示指定的{@code字节}。基数设为10。
      * @param b the {@code byte} to be converted
      * @return the string representation of the specified {@code byte}
      * @see java.lang.Integer#toString(int)
@@ -397,7 +397,7 @@ public final class Byte extends Number implements Comparable<Byte> {
     /**
      * Returns a hash code for a {@code byte} value; compatible with
      * {@code Byte.hashCode()}.
-     *
+     * 返回{@code byte}值的哈希码;兼容{@code Byte.hashCode()}。
      * @param value the value to hash
      * @return a hash code value for a {@code byte} value.
      * @since 1.8
@@ -510,7 +510,7 @@ public final class Byte extends Number implements Comparable<Byte> {
     /**
      * The number of bytes used to represent a {@code byte} value in two's
      * complement binary form.
-     *
+     * 用2的补码二进制形式表示{@code byte}值的字节数。
      * @since 1.8
      */
     public static final int BYTES = SIZE / Byte.SIZE;

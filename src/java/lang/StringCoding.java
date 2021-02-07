@@ -44,7 +44,7 @@ import sun.nio.cs.ArrayDecoder;
 import sun.nio.cs.ArrayEncoder;
 
 /**
- * Utility class for string encoding and decoding.
+ * Utility class for string encoding and decoding. 用于字符串编码和解码的实用程序类。
  */
 
 class StringCoding {

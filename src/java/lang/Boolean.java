@@ -56,7 +56,7 @@ public final class Boolean implements java.io.Serializable,
     public static final Boolean FALSE = new Boolean(false);
 
     /**
-     * The Class object representing the primitive type boolean.
+     * The Class object representing the primitive type boolean. 表示基本类型布尔的类对象。
      *
      * @since   JDK1.1
      */
@@ -294,7 +294,7 @@ public final class Boolean implements java.io.Serializable,
     /**
      * Returns the result of applying the logical AND operator to the
      * specified {@code boolean} operands.
-     *
+     * 返回将逻辑和操作符应用到指定的{@code boolean}操作数后的结果。
      * @param a the first operand
      * @param b the second operand
      * @return the logical AND of {@code a} and {@code b}
@@ -308,7 +308,7 @@ public final class Boolean implements java.io.Serializable,
     /**
      * Returns the result of applying the logical OR operator to the
      * specified {@code boolean} operands.
-     *
+     * 返回将逻辑或操作符应用到指定的{@code boolean}操作数后的结果。
      * @param a the first operand
      * @param b the second operand
      * @return the logical OR of {@code a} and {@code b}
@@ -322,7 +322,7 @@ public final class Boolean implements java.io.Serializable,
     /**
      * Returns the result of applying the logical XOR operator to the
      * specified {@code boolean} operands.
-     *
+     * 返回将逻辑异或操作符应用到指定的{@code boolean}操作数后的结果。
      * @param a the first operand
      * @param b the second operand
      * @return  the logical XOR of {@code a} and {@code b}

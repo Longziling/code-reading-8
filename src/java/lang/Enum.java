@@ -239,12 +239,12 @@ public abstract class Enum<E extends Enum<E>>
     }
 
     /**
-     * enum classes cannot have finalize methods.
+     * enum classes cannot have finalize methods. 枚举类不能有finalize方法。
      */
     protected final void finalize() { }
 
     /**
-     * prevent default deserialization
+     * prevent default deserialization 防止违约反序列化
      */
     private void readObject(ObjectInputStream in) throws IOException,
         ClassNotFoundException {

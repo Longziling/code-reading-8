@@ -242,22 +242,22 @@ class Thread implements Runnable {
     }
 
     /**
-     * The minimum priority that a thread can have.
+     * The minimum priority that a thread can have. 线程可以拥有的最小优先级。
      */
     public final static int MIN_PRIORITY = 1;
 
    /**
-     * The default priority that is assigned to a thread.
+     * The default priority that is assigned to a thread. 分配给线程的默认优先级。
      */
     public final static int NORM_PRIORITY = 5;
 
     /**
-     * The maximum priority that a thread can have.
+     * The maximum priority that a thread can have. 线程所能拥有的最大优先级。
      */
     public final static int MAX_PRIORITY = 10;
 
     /**
-     * Returns a reference to the currently executing thread object.
+     * Returns a reference to the currently executing thread object. 返回对当前正在执行的线程对象的引用
      *
      * @return  the currently executing thread.
      */
@@ -308,10 +308,10 @@ class Thread implements Runnable {
      * monitors.
      *
      * @param  millis
-     *         the length of time to sleep in milliseconds
+     *         the length of time to sleep in milliseconds 睡眠时间的长度，以毫秒为单位
      *
      * @param  nanos
-     *         {@code 0-999999} additional nanoseconds to sleep
+     *         {@code 0-999999} additional nanoseconds to sleep 额外的纳秒睡眠时间
      *
      * @throws  IllegalArgumentException
      *          if the value of {@code millis} is negative, or the value of
@@ -341,7 +341,7 @@ class Thread implements Runnable {
     }
 
     /**
-     * Initializes a Thread with the current AccessControlContext.
+     * Initializes a Thread with the current AccessControlContext. 用当前AccessControlContext初始化一个线程。
      * @see #init(ThreadGroup,Runnable,String,long,AccessControlContext,boolean)
      */
     private void init(ThreadGroup g, Runnable target, String name,
