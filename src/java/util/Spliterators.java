@@ -455,22 +455,22 @@ public final class Spliterators {
     /**
      * Creates a {@code Spliterator} using a given {@code Iterator}
      * as the source of elements, with no initial size estimate.
-     *
+     * 使用给定的{@code Iterator}作为元素源，创建一个{@code Spliterator}，不需要估计初始大小。
      * <p>The spliterator is not
      * <em><a href="Spliterator.html#binding">late-binding</a></em>, inherits
      * the <em>fail-fast</em> properties of the iterator, and implements
      * {@code trySplit} to permit limited parallelism.
-     *
+     * 拆分器不是<em><a href>late-binding</a></em>，继承了迭代器的<em>fail-fast</em>属性，并实现了{@code trySplit}以允许有限的并行性。
      * <p>Traversal of elements should be accomplished through the spliterator.
      * The behaviour of splitting and traversal is undefined if the iterator is
      * operated on after the spliterator is returned.
-     *
-     * @param <T> Type of elements
-     * @param iterator The iterator for the source
+     * 元素的遍历应该通过spliterator来完成。如果在spliterator返回后对迭代器进行操作，则拆分和遍历的行为是未定义的。
+     * @param <T> Type of elements 元素的类型
+     * @param iterator The iterator for the source 迭代器数据来源
      * @param characteristics Characteristics of this spliterator's source
      *        or elements ({@code SIZED} and {@code SUBSIZED}, if supplied, are
-     *        ignored and are not reported.)
-     * @return A spliterator from an iterator
+     *        ignored and are not reported.) 这个拆分器的源或元素({@code size}和{@code subzed}，如果提供，则忽略并不报告)的特征。
+     * @return A spliterator from an iterator 从迭代器派生的拆分器
      * @throws NullPointerException if the given iterator is {@code null}
      */
     public static <T> Spliterator<T> spliteratorUnknownSize(Iterator<? extends T> iterator,

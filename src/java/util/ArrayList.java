@@ -37,25 +37,25 @@ import sun.misc.SharedSecrets;
  * this class provides methods to manipulate the size of the array that is
  * used internally to store the list.  (This class is roughly equivalent to
  * <tt>Vector</tt>, except that it is unsynchronized.)
- *
+ * <tt>List</tt>接口的可调整数组实现。实现所有可选的列表操作，并允许所有元素，包括<tt>null</tt>。除了实现<tt>List</tt>接口之外，这个类还提供了一些方法来操作用于内部存储列表的数组的大小。(这个类大致相当于<tt>Vector</tt>，除了它是不同步的。)
  * <p>The <tt>size</tt>, <tt>isEmpty</tt>, <tt>get</tt>, <tt>set</tt>,
  * <tt>iterator</tt>, and <tt>listIterator</tt> operations run in constant
  * time.  The <tt>add</tt> operation runs in <i>amortized constant time</i>,
  * that is, adding n elements requires O(n) time.  All of the other operations
  * run in linear time (roughly speaking).  The constant factor is low compared
  * to that for the <tt>LinkedList</tt> implementation.
- *
+ * size、isEmpty、get、set、iterator和listIterator操作在常量时间内运行。添加操作运行在平摊常数时间内，即添加n个元素需要O(n)时间。所有其他操作都在线性时间内运行(粗略地说)。与LinkedList实现相比，该常量因子较低。
  * <p>Each <tt>ArrayList</tt> instance has a <i>capacity</i>.  The capacity is
  * the size of the array used to store the elements in the list.  It is always
  * at least as large as the list size.  As elements are added to an ArrayList,
  * its capacity grows automatically.  The details of the growth policy are not
  * specified beyond the fact that adding an element has constant amortized
  * time cost.
- *
+ * 每个ArrayList实例都有一个容量。容量是用于存储列表中元素的数组的大小。它总是至少与列表大小一样大。当元素被添加到ArrayList时，它的容量会自动增长。除了添加元素具有恒定的摊还时间成本这一事实之外，增长策略的细节没有被指定。
  * <p>An application can increase the capacity of an <tt>ArrayList</tt> instance
  * before adding a large number of elements using the <tt>ensureCapacity</tt>
  * operation.  This may reduce the amount of incremental reallocation.
- *
+ * 应用程序可以在使用ensureCapacity操作添加大量元素之前增加ArrayList实例的容量。这可能会减少增量重新分配的数量。
  * <p><strong>Note that this implementation is not synchronized.</strong>
  * If multiple threads access an <tt>ArrayList</tt> instance concurrently,
  * and at least one of the threads modifies the list structurally, it
@@ -64,11 +64,11 @@ import sun.misc.SharedSecrets;
  * resizes the backing array; merely setting the value of an element is not
  * a structural modification.)  This is typically accomplished by
  * synchronizing on some object that naturally encapsulates the list.
- *
+ * 注意，这个实现是不同步的。如果多个线程同时访问一个ArrayList实例，并且至少有一个线程在结构上修改了列表，那么必须在外部同步。(结构修改是指添加或删除一个或多个元素，或显式调整后备数组的大小的任何操作;仅仅设置元素的值并不是结构上的修改。)这通常是通过在自然封装列表的对象上同步来实现的。
  * If no such object exists, the list should be "wrapped" using the
  * {@link Collections#synchronizedList Collections.synchronizedList}
  * method.  This is best done at creation time, to prevent accidental
- * unsynchronized access to the list:<pre>
+ * unsynchronized access to the list:<pre> 如果不存在这样的对象，列表应该使用{@link Collections#synchronizedList Collections.synchronizedList}方法。这最好在创建时进行，以防止对列表的意外非同步访问
  *   List list = Collections.synchronizedList(new ArrayList(...));</pre>
  *
  * <p><a name="fail-fast">
@@ -90,7 +90,7 @@ import sun.misc.SharedSecrets;
  * Therefore, it would be wrong to write a program that depended on this
  * exception for its correctness:  <i>the fail-fast behavior of iterators
  * should be used only to detect bugs.</i>
- *
+ * 请注意，迭代器的fail-fast行为无法得到保证，因为一般来说，在存在非同步并发修改的情况下，不可能做出任何硬保证。快速失败迭代器会抛出{@code ConcurrentModificationException}。因此，编写依赖于这个异常来保证正确性的程序是错误的:迭代器的快速失败行为应该只用于检测错误
  * <p>This class is a member of the
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
  * Java Collections Framework</a>.

@@ -32,7 +32,7 @@ import java.util.function.UnaryOperator;
  * interface has precise control over where in the list each element is
  * inserted.  The user can access elements by their integer index (position in
  * the list), and search for elements in the list.<p>
- *
+ * 有序集合(也称为序列)。该接口的用户可以精确地控制每个元素在列表中的插入位置。用户可以通过整数索引(在列表中的位置)访问元素，并在列表中搜索元素
  * Unlike sets, lists typically allow duplicate elements.  More formally,
  * lists typically allow pairs of elements <tt>e1</tt> and <tt>e2</tt>
  * such that <tt>e1.equals(e2)</tt>, and they typically allow multiple
@@ -40,13 +40,13 @@ import java.util.function.UnaryOperator;
  * that someone might wish to implement a list that prohibits duplicates, by
  * throwing runtime exceptions when the user attempts to insert them, but we
  * expect this usage to be rare.<p>
- *
+ * 与集合不同，列表通常允许重复元素。更正式地说，列表通常允许元素对e1和e2，例如e1.equals(e2)，如果它们允许null元素，则通常允许多个null元素。有人可能希望通过在用户试图插入重复时抛出运行时异常来实现一个禁止重复的列表，这并非不可想象，但我们希望这种用法很少出现
  * The <tt>List</tt> interface places additional stipulations, beyond those
  * specified in the <tt>Collection</tt> interface, on the contracts of the
  * <tt>iterator</tt>, <tt>add</tt>, <tt>remove</tt>, <tt>equals</tt>, and
  * <tt>hashCode</tt> methods.  Declarations for other inherited methods are
  * also included here for convenience.<p>
- *
+ * List接口在(iterator)、(add)、(remove)、(equals)和(hashCode)方法的契约上放置了额外的规定，超出了集合接口中指定的规定。为了方便起见，这里还包括了其他继承方法的声明
  * The <tt>List</tt> interface provides four methods for positional (indexed)
  * access to list elements.  Lists (like Java arrays) are zero based.  Note
  * that these operations may execute in time proportional to the index value
@@ -54,25 +54,25 @@ import java.util.function.UnaryOperator;
  * example). Thus, iterating over the elements in a list is typically
  * preferable to indexing through it if the caller does not know the
  * implementation.<p>
- *
+ * List接口为按位置(索引)访问列表元素提供了四个方法。列表(如Java数组)是基于零的。注意，这些操作的执行时间可能与某些实现(例如LinkedList类)的索引值成比例。因此，如果调用者不知道.&lt;p的实现，迭代列表中的元素通常比索引列表中的元素更可取
  * The <tt>List</tt> interface provides a special iterator, called a
  * <tt>ListIterator</tt>, that allows element insertion and replacement, and
  * bidirectional access in addition to the normal operations that the
  * <tt>Iterator</tt> interface provides.  A method is provided to obtain a
  * list iterator that starts at a specified position in the list.<p>
- *
+ * <tt>List</tt>接口提供了一个特殊的迭代器，称为<tt>ListIterator</tt>，除了<tt> iterator </tt>接口提供的正常操作之外，还允许元素的插入和替换，以及双向访问。提供了一个方法来获取从列表中指定位置开始的列表迭代器
  * The <tt>List</tt> interface provides two methods to search for a specified
  * object.  From a performance standpoint, these methods should be used with
  * caution.  In many implementations they will perform costly linear
  * searches.<p>
- *
+ * List接口提供了两个方法来搜索指定的对象。从性能的角度来看，应该谨慎使用这些方法。在许多实现中，它们将执行代价高昂的线性搜索。
  * The <tt>List</tt> interface provides two methods to efficiently insert and
  * remove multiple elements at an arbitrary point in the list.<p>
- *
+ * <tt>List</tt>接口提供了两种方法，可以有效地在列表的任意点插入和删除多个元素。
  * Note: While it is permissible for lists to contain themselves as elements,
  * extreme caution is advised: the <tt>equals</tt> and <tt>hashCode</tt>
  * methods are no longer well defined on such a list.
- *
+ * 注意:虽然允许列表将自己包含为元素，但要特别小心:equals和hashCode方法不再在这样的列表中定义。
  * <p>Some list implementations have restrictions on the elements that
  * they may contain.  For example, some implementations prohibit null elements,
  * and some have restrictions on the types of their elements.  Attempting to
@@ -86,7 +86,7 @@ import java.util.function.UnaryOperator;
  * exception or it may succeed, at the option of the implementation.
  * Such exceptions are marked as "optional" in the specification for this
  * interface.
- *
+ * 一些列表实现对它们可能包含的元素有限制。例如，有些实现禁止null元素，有些实现对其元素的类型有限制。尝试添加不符合条件的元素会引发未检查的异常，通常是NullPointerException或ClassCastException。试图查询不符合条件的元素是否存在可能会抛出异常，或者只返回false;一些实现将展示前一种行为，而另一些将展示后一种行为。更普遍的是，如果一个不符合条件的元素的完成不会导致将一个不符合条件的元素插入到列表中，那么尝试对它进行操作可能会抛出异常，也可能成功，这取决于实现的选项。此类异常在该接口的规范中被标记为“可选”。
  * <p>This interface is a member of the
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
  * Java Collections Framework</a>.
