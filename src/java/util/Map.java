@@ -375,8 +375,8 @@ public interface Map<K,V> {
     interface Entry<K,V> {
         /**
          * Returns the key corresponding to this entry.
-         *
-         * @return the key corresponding to this entry
+         * 返回与此条目对应的键。
+         * @return the key corresponding to this entry 与此项对应的键
          * @throws IllegalStateException implementations may, but are not
          *         required to, throw this exception if the entry has been
          *         removed from the backing map.
@@ -387,7 +387,7 @@ public interface Map<K,V> {
          * Returns the value corresponding to this entry.  If the mapping
          * has been removed from the backing map (by the iterator's
          * <tt>remove</tt> operation), the results of this call are undefined.
-         *
+         * 返回与此条目对应的值。如果映射已经从后备映射中移除(通过迭代器的<tt>remove</tt>操作)，则此调用的结果未定义。
          * @return the value corresponding to this entry
          * @throws IllegalStateException implementations may, but are not
          *         required to, throw this exception if the entry has been
@@ -400,7 +400,7 @@ public interface Map<K,V> {
          * value (optional operation).  (Writes through to the map.)  The
          * behavior of this call is undefined if the mapping has already been
          * removed from the map (by the iterator's <tt>remove</tt> operation).
-         *
+         * 将此条目对应的值替换为指定的值(可选操作)。(写到map[上。)如果映射已经从映射中移除(通过迭代器的<tt>remove</tt>操作)，则该调用的行为是未定义的。
          * @param value new value to be stored in this entry
          * @return old value corresponding to the entry
          * @throws UnsupportedOperationException if the <tt>put</tt> operation
@@ -457,14 +457,14 @@ public interface Map<K,V> {
 
         /**
          * Returns a comparator that compares {@link Map.Entry} in natural order on key.
-         *
+         * 返回一个比较器来比较{@link Map.Entry}在键上的自然顺序。
          * <p>The returned comparator is serializable and throws {@link
          * NullPointerException} when comparing an entry with a null key.
          *
          * @param  <K> the {@link Comparable} type of then map keys
          * @param  <V> the type of the map values
          * @return a comparator that compares {@link Map.Entry} in natural order on key.
-         * @see Comparable
+         * @see Comparable Comparator<Map.Entry<K, V>> & Serializable 表示同时满足两个接口类
          * @since 1.8
          */
         public static <K extends Comparable<? super K>, V> Comparator<Map.Entry<K,V>> comparingByKey() {
@@ -699,7 +699,7 @@ public interface Map<K,V> {
      * If the specified key is not already associated with a value (or is mapped
      * to {@code null}) associates it with the given value and returns
      * {@code null}, else returns the current value.
-     *
+     * 如果指定的键还没有与某个值相关联(或者被映射到{@code null})，则将其与给定的值相关联并返回{@code null}，否则返回当前值。
      * @implSpec
      * The default implementation is equivalent to, for this {@code
      * map}:
@@ -846,7 +846,7 @@ public interface Map<K,V> {
     /**
      * Replaces the entry for the specified key only if it is
      * currently mapped to some value.
-     *
+     * 仅当指定键的当前映射为某个值时，才替换该项。
      * @implSpec
      * The default implementation is equivalent to, for this {@code map}:
      *
@@ -861,7 +861,7 @@ public interface Map<K,V> {
      * or atomicity properties of this method. Any implementation providing
      * atomicity guarantees must override this method and document its
      * concurrency properties.
-      *
+      * 默认实现不保证此方法的同步或原子性属性。任何提供原子性保证的实现都必须重写此方法并记录其并发性属性。
      * @param key key with which the specified value is associated
      * @param value value to be associated with the specified key
      * @return the previous value associated with the specified key, or

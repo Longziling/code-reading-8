@@ -29,7 +29,7 @@ import java.util.Map.Entry;
 /**
  * This class provides a skeletal implementation of the <tt>Map</tt>
  * interface, to minimize the effort required to implement this interface.
- *
+ * 这个类提供了<tt>Map</tt>接口的框架实现，以减少实现该接口所需的工作。
  * <p>To implement an unmodifiable map, the programmer needs only to extend this
  * class and provide an implementation for the <tt>entrySet</tt> method, which
  * returns a set-view of the map's mappings.  Typically, the returned set
@@ -601,7 +601,7 @@ public abstract class AbstractMap<K,V> implements Map<K,V> {
      * implementations. For example, it may be convenient to return
      * arrays of <tt>SimpleEntry</tt> instances in method
      * <tt>Map.entrySet().toArray</tt>.
-     *
+     * 一种维护键和值的条目。可以使用setValue方法更改该值。这个类简化了构建自定义映射实现的过程。例如，在方法Map.entrySet(). toarray中返回SimpleEntry实例的数组可能很方便。
      * @since 1.6
      */
     public static class SimpleEntry<K,V>
@@ -731,7 +731,7 @@ public abstract class AbstractMap<K,V> implements Map<K,V> {
      * does not support method <tt>setValue</tt>.  This class may be
      * convenient in methods that return thread-safe snapshots of
      * key-value mappings.
-     *
+     * 一种维护不可变键和值的项。这个类不支持方法<tt>setValue</tt>。在返回键值映射的线程安全快照的方法中，这个类可能很方便。
      * @since 1.6
      */
     public static class SimpleImmutableEntry<K,V>

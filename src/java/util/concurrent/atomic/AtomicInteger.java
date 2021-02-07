@@ -150,56 +150,56 @@ public class AtomicInteger extends Number implements java.io.Serializable {
     }
 
     /**
-     * Atomically increments by one the current value.
+     * Atomically increments by one the current value. 将当前值原子地加1。
      *
-     * @return the previous value
+     * @return the previous value 前一个值
      */
     public final int getAndIncrement() {
         return unsafe.getAndAddInt(this, valueOffset, 1);
     }
 
     /**
-     * Atomically decrements by one the current value.
+     * Atomically decrements by one the current value. 使当前值原子地递减一。
      *
-     * @return the previous value
+     * @return the previous value 前一个值
      */
     public final int getAndDecrement() {
         return unsafe.getAndAddInt(this, valueOffset, -1);
     }
 
     /**
-     * Atomically adds the given value to the current value.
+     * Atomically adds the given value to the current value. 原子地将给定值添加到当前值。
      *
      * @param delta the value to add
-     * @return the previous value
+     * @return the previous value 前一个值
      */
     public final int getAndAdd(int delta) {
         return unsafe.getAndAddInt(this, valueOffset, delta);
     }
 
     /**
-     * Atomically increments by one the current value.
+     * Atomically increments by one the current value. 将当前值原子地加1
      *
-     * @return the updated value
+     * @return the updated value 更新后的值
      */
     public final int incrementAndGet() {
         return unsafe.getAndAddInt(this, valueOffset, 1) + 1;
     }
 
     /**
-     * Atomically decrements by one the current value.
+     * Atomically decrements by one the current value. 使当前值原子地递减一。
      *
-     * @return the updated value
+     * @return the updated value 更新后的值
      */
     public final int decrementAndGet() {
         return unsafe.getAndAddInt(this, valueOffset, -1) - 1;
     }
 
     /**
-     * Atomically adds the given value to the current value.
+     * Atomically adds the given value to the current value. 原子地将给定值添加到当前值。
      *
      * @param delta the value to add
-     * @return the updated value
+     * @return the updated value 更新后的值
      */
     public final int addAndGet(int delta) {
         return unsafe.getAndAddInt(this, valueOffset, delta) + delta;
