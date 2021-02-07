@@ -31,24 +31,24 @@ package java.util;
  * backed by a "random access" data store (such as an array).  For sequential
  * access data (such as a linked list), {@link AbstractSequentialList} should
  * be used in preference to this class.
- *
+ * 这个类提供了{@link List}接口的框架实现，以减少实现这个由“随机访问”数据存储(如数组)支持的接口所需的工作量。对于顺序访问数据(比如一个链表)，{@link AbstractSequentialList}应该优先使用这个类。
  * <p>To implement an unmodifiable list, the programmer needs only to extend
  * this class and provide implementations for the {@link #get(int)} and
  * {@link List#size() size()} methods.
- *
+ * 要实现一个不可修改的列表，程序员只需要扩展这个类，并提供{@link #get(int)}和{@link List#size() size()}方法的实现。
  * <p>To implement a modifiable list, the programmer must additionally
  * override the {@link #set(int, Object) set(int, E)} method (which otherwise
  * throws an {@code UnsupportedOperationException}).  If the list is
  * variable-size the programmer must additionally override the
  * {@link #add(int, Object) add(int, E)} and {@link #remove(int)} methods.
- *
+ * 为了实现一个可修改的列表，程序员必须额外覆盖{@link #set(int, Object) set(int, E)}方法(否则会抛出{@code UnsupportedOperationException})。如果列表是可变大小的，程序员必须另外覆盖{@link #add(int, Object) add(int, E)}和{@link #remove(int)}方法。
  * <p>The programmer should generally provide a void (no argument) and collection
  * constructor, as per the recommendation in the {@link Collection} interface
  * specification.
- *
+ * 程序员通常应该按照{@link Collection}接口规范中的建议，提供一个void(无参数)和collection构造函数。
  * <p>Unlike the other abstract collection implementations, the programmer does
  * <i>not</i> have to provide an iterator implementation; the iterator and
- * list iterator are implemented by this class, on top of the "random access"
+ * list iterator are implemented by this class, on top of the "random access" 与其他抽象集合实现不同，程序员不需要提供iterator实现;iterator和列表iterator 是由这个类在“随机访问”之上实现的
  * methods:
  * {@link #get(int)},
  * {@link #set(int, Object) set(int, E)},
@@ -58,7 +58,7 @@ package java.util;
  * <p>The documentation for each non-abstract method in this class describes its
  * implementation in detail.  Each of these methods may be overridden if the
  * collection being implemented admits a more efficient implementation.
- *
+ * 该类中每个非抽象方法的文档详细描述了它的实现。如果正在实现的集合允许更有效的实现，那么这些方法中的每一个都可能被覆盖。
  * <p>This class is a member of the
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
  * Java Collections Framework</a>.

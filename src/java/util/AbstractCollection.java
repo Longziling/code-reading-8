@@ -28,26 +28,26 @@ package java.util;
 /**
  * This class provides a skeletal implementation of the <tt>Collection</tt>
  * interface, to minimize the effort required to implement this interface. <p>
- *
+ * 这个类提供了Collection接口的框架实现，以减少实现该接口所需的工作。
  * To implement an unmodifiable collection, the programmer needs only to
  * extend this class and provide implementations for the <tt>iterator</tt> and
  * <tt>size</tt> methods.  (The iterator returned by the <tt>iterator</tt>
  * method must implement <tt>hasNext</tt> and <tt>next</tt>.)<p>
- *
+ * 要实现不可修改的集合，程序员只需要扩展该类并提供iterator和size方法的实现。(iterator方法返回的迭代器必须实现hasNext和next。)
  * To implement a modifiable collection, the programmer must additionally
- * override this class's <tt>add</tt> method (which otherwise throws an
- * <tt>UnsupportedOperationException</tt>), and the iterator returned by the
- * <tt>iterator</tt> method must additionally implement its <tt>remove</tt>
- * method.<p>
- *
+ *  * override this class's <tt>add</tt> method (which otherwise throws an
+ *  * <tt>UnsupportedOperationException</tt>), and the iterator returned by the
+ *  * <tt>iterator</tt> method must additionally implement its <tt>remove</tt>
+ *  * method.<p>
+ * 要实现一个可修改的集合，程序员必须额外覆盖该类的add方法(否则会抛出UnsupportedOperationException)，iterator方法返回的迭代器必须额外实现它的remove方法。
  * The programmer should generally provide a void (no argument) and
  * <tt>Collection</tt> constructor, as per the recommendation in the
  * <tt>Collection</tt> interface specification.<p>
- *
+ * 程序员通常应该提供一个void(无参数)和Collection 构造函数，按照Collection 接口规范中的建议。
  * The documentation for each non-abstract method in this class describes its
  * implementation in detail.  Each of these methods may be overridden if
  * the collection being implemented admits a more efficient implementation.<p>
- *
+ * 该类中每个非抽象方法的文档详细描述了它的实现。如果正在实现的集合允许更有效的实现，那么这些方法中的每一个都可能被覆盖。
  * This class is a member of the
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
  * Java Collections Framework</a>.
@@ -61,15 +61,15 @@ package java.util;
 public abstract class AbstractCollection<E> implements Collection<E> {
     /**
      * Sole constructor.  (For invocation by subclass constructors, typically
-     * implicit.)
+     * implicit.) 唯一的构造函数。(用于子类构造函数的调用，通常是隐式的。)
      */
     protected AbstractCollection() {
     }
 
-    // Query Operations
+    // Query Operations 查询操作
 
     /**
-     * Returns an iterator over the elements contained in this collection.
+     * Returns an iterator over the elements contained in this collection. 返回该集合中包含的元素的迭代器。
      *
      * @return an iterator over the elements contained in this collection
      */
